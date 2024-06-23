@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <title>ElGato Browser</title>
+</head>
+
+<body>
+    <section class="container">
+        <h1>ElGato</h1>
+        <p>Your Gateway to the Internet</p>
+        <form id="search_form">
+            <textarea id="search_text" placeholder="Search.."></textarea>
+            <button id="search_button"><img src="resources/svgs/search_24dp_FILL0_wght400_GRAD0_opsz24.svg"/></button>
+        </form>
+
+    </section>
+    <div class="buttons">
+        <button id="toggle-dark-mode"><img id="toggle_dark" src="resources/svgs/dark_mode_24dp_FILL0_wght400_GRAD0_opsz24.svg"/></button>
+        <button id="reset-to-system"><img id="reset_img" src="resources/svgs/restart_alt_24dp_FILL0_wght400_GRAD0_opsz24.svg"/></button>
+    </div>
+
+<script src="renderer.js"></script>
+</body>
+
+</html>
