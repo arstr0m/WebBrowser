@@ -10,21 +10,32 @@
 </head>
 
 <body>
-    <section class="container">
-        <h1>ElGato</h1>
-        <p>Your Gateway to the Internet</p>
-        <form id="search_form">
-            <textarea id="search_text" placeholder="Search.."></textarea>
-            <button id="search_button"><img src="resources/svgs/search_24dp_FILL0_wght400_GRAD0_opsz24.svg"/></button>
-        </form>
-
-    </section>
-    <div class="buttons">
-        <button id="toggle-dark-mode"><img id="toggle_dark" src="resources/svgs/dark_mode_24dp_FILL0_wght400_GRAD0_opsz24.svg"/></button>
-        <button id="reset-to-system"><img id="reset_img" src="resources/svgs/restart_alt_24dp_FILL0_wght400_GRAD0_opsz24.svg"/></button>
-    </div>
-
+<header>
+    <nav class="controls">
+        <button id="back"><img id="back_image" src="resources/svgs/controls/back.svg"/></button>
+        <button id="forward"><img id="forward_image" src="resources/svgs/controls/forward.svg"/></button>
+        <button id="refresh"><img id="refresh_image" src="resources/svgs/controls/refresh.svg"/></button>
+        <button id="download"><img id="download_image" src="resources/svgs/controls/download.svg"/></button>
+        <button id="home"><img id="home_image" src="resources/svgs/controls/home.svg"/></button>
+        <button id="star"><img id="star_image" src="resources/svgs/controls/star.svg"/></button>
+        <button id="bookmark"><img id="bookmark_image" src="resources/svgs/controls/bookmark.svg"/></button>
+        <section class="search">
+            <form id="search_nav">
+                <input type="text" id="search_input" placeholder="Search or enter URL.."/>
+                <button id="search_button" type="submit"><img src="resources/svgs/search.svg"/></button>
+            </form>
+        </section>
+    </nav>
+</header>
+<section class="container">
+    <webview id="browser" src="https://www.google.com"></webview>
+</section>
+<section class="history">
+    <h3 id="weather"></h3>
+    <h2 id="current"></h2>
+</section>
 <script src="renderer.js"></script>
+<script type="module" src="browser.js"></script>
 </body>
 
 </html>

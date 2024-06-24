@@ -2,7 +2,8 @@
     body { background: #333; color: white; }
     .container form{
         /*TODO needs implementation*/
-
+        background: azure;
+        border: 1px solid black;
     }
 }
 
@@ -42,7 +43,7 @@ h1{
 }
 
 .container{
-    height: 90vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centra horizontalmente */
@@ -51,8 +52,49 @@ h1{
 .container p{
     margin-top: 1rem;
 }
+header{
+    margin: 0;
+}
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.search{
+    flex: 1;
+    outline-color: navy;
+}
+.search form:focus-within{
+    background-color: lightgray;
+    border: 1px solid white;
+    color: white;
+
+}
+.search form input:focus{
+    color: white;
+}
+nav .search form{
+    flex-direction: row;
+    justify-content: center;
+    background: azure;
+    align-items: center;
+    width: calc(100% - 20px);
+    display: flex;
+    border-radius: 30px;
+}
+nav .search form input{
+    text-align: center;
+    background: none;
+    resize: none;
+    border: none;
+    margin-top: 0.5rem;
+    flex: 1;
+    font-size: large;
+    cursor: text;
+    outline: none;
+}
 .container form{
-    margin-top: 1rem;
+    padding-top: 1rem;
     display: flex;
     width: 50vw;
     flex-direction: row;
@@ -62,7 +104,8 @@ h1{
     border-radius: 30px;
 }
 .container form button{
-    margin: auto 0;
+    margin-bottom: 1rem;
+    margin-right: 0.5rem;
     border: none;
     background: none;
 }
@@ -77,7 +120,6 @@ h1{
 .container form textarea{
     background: none;
     font-size: large;
-    lineheight: 1.5;
     align-items: center;
     font-family: 'Roboto', sans-serif;
     height: 90%;
@@ -91,11 +133,27 @@ h1{
 }
 .buttons{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex:0;
 }
 .buttons button{
     background: none;
     border: none;
 
+}
+.controls button {
+    background: none;
+    border: none;
+}
+.container{
+    margin-top: 0;
+    height: 90vh;
+    width: 99vw;
+}
+section webview {
+    width: 100dvw;
+    height:90dvh;
+    border: none;
+    padding: 0em 0;
+    margin-top: 1%;
+    border-radius: 10px;
 }

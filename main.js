@@ -1,5 +1,6 @@
 const { app, BrowserWindow, ipcMain, nativeTheme } = require('electron')
 const path = require('path')
+const sqlite = require("sqlite-electron");
 
 const electronReload = require('electron-reload');
 electronReload(__dirname);
@@ -9,12 +10,17 @@ const createWindow = () => {
         width: 800,
         height: 600,
         webPreferences: {
-            preload: path.join(__dirname, 'preload.js')
+            preload: path.join(__dirname, 'preload.js'),
+            nodeIntegration: true,
+            contextIsolation: false,
+            enableRemoteModule: true,
+            webviewTag: true
         }
+
     })
 
     win.loadFile('index.html')
-
+    mainWindow.webContents.openDevTools();
     ipcMain.handle('dark-mode:toggle', () => {
         if (nativeTheme.shouldUseDarkColors) {
             nativeTheme.themeSource = 'light'
